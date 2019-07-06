@@ -14,7 +14,10 @@ def main():
         response = input("Enter a players name! ")
 
         if response == "0":
-            finished_input = True
+            if len(players) % team_size != 0:
+                print("Teams would be unbalanced. Add another player")
+            else:
+                finished_input = True
         else:
             players.append(response)
 
